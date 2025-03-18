@@ -7,9 +7,9 @@ phases:
       # Check AWS CLI version
       - aws --version
       # Log in to Amazon ECR====>write the login command from your actual repo
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 496164430211.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 943025321848.dkr.ecr.us-east-1.amazonaws.com
       # Define repository URI and image tag
-      - REPOSITORY_URI=098504886869.dkr.ecr.us-east-1.amazonaws.com/containerregistry/dockers =>====>write URI of your actual repo
+      - REPOSITORY_URI=943025321848.dkr.ecr.us-east-1.amazonaws.com/containerregistry/dockers =>====>write URI of your actual repo
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
